@@ -1,59 +1,50 @@
-Installation
-Clone the repository:
+# Custom Reconnaissance Tool
 
-git clone https://github.com/yourusername/recon-tool.git
+A lightweight, modular command-line interface (CLI) tool designed for automated initial information gathering during penetration testing engagements. This tool provides core reconnaissance functionalities to aid security professionals and interns in real-world red team scenarios.
+
+---
+
+## Table of Contents
+
+* [Features](#features)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [Usage](#usage)
+* [Available Flags](#available-flags)
+* [Future Improvements](#future-improvements)
+* [License](#license)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
+
+---
+
+## Features
+
+* **Passive Reconnaissance**:
+    * WHOIS lookup
+    * DNS enumeration (A, MX, TXT, NS records)
+    * Subdomain enumeration using external APIs (e.g., crt.sh, AlienVault OTX)
+* **Active Reconnaissance**:
+    * Port scanning (via Nmap wrapper or sockets)
+    * Banner grabbing
+    * Detecting technologies (e.g., using Wappalyzer CLI)
+* **Reporting**:
+    * Generate summary reports in `.txt` or `.html` format.
+    * Include timestamps and IP resolution details.
+* **Modularity**:
+    * Each reconnaissance module is independent and callable via command-line flags.
+    * Implemented logging with verbosity levels for detailed output.
+
+---
+
+## Installation
+
+To set up the reconnaissance tool, follow these steps:
+
+### 1. Clone the Repository
+
+First, clone this repository to your local machine:
+
+```bash
+git clone [https://github.com/your-username/recon-tool.git](https://github.com/your-username/recon-tool.git) # Replace with your actual repo URL
 cd recon-tool
-Install required Python dependencies:
-
-pip install -r requirements.txt
-(Optional) For enhanced tech detection, install Wappalyzer CLI globally using Node.js:
-
-npm install -g wappalyzer
-Configure API keys and tool settings in config/sources.yaml.
-
-Usage
-Run the tool from the command line:
-
-python3 main.py example.com --whois --dns --subdomains --ports --tech --wappa -vv
-Use the flags to specify which reconnaissance modules to run:
-
---whois — WHOIS lookup
-
---dns — DNS enumeration
-
---subdomains — Subdomain enumeration
-
---active — Active reconnaissance
-
---ports — Port scanning
-
---dirs — Directory enumeration
-
---vulns — Vulnerability scanning
-
---vt — VirusTotal domain report
-
---tech — Basic technology detection
-
---wappa — Enhanced technology detection with Wappalyzer CLI
-
--v, -vv, -vvv — Increase verbosity/debug output
-
-Future Improvements
-Asynchronous scanning for improved speed
-
-Extended fingerprinting using additional APIs and ML models
-
-Better error handling and retries
-
-Graphical or web-based reporting interface
-
-Integration with CI/CD pipelines for automated security checks
-
-License
-This project is licensed under the MIT License.
-
-Acknowledgments
-Wappalyzer for technology detection
-
-crt.sh and HackerTarget for subdomain enumeration APIs
