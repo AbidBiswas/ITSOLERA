@@ -1,0 +1,8 @@
+crtsh:
+  enabled: true
+hackertarget:
+  enabled: true
+virustotal:
+  enabled: true
+  api_key: ""
+

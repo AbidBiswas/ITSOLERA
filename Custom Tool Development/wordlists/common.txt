@@ -1,0 +1,9 @@
+admin/
+login/
+robots.txt
+sitemap.xml
+backup/
+test/
+.env
+.git/HEAD
+wp-admin/
